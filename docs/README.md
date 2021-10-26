@@ -68,6 +68,24 @@ Medicine of johntan123 are shown below:
   1.Medicine Name: paracetemol, Frequency: once a day
 ```
 
+### `deletemed` - Deletes medicine details of elderly that has been stored
+
+The user will provide the medicine name and elderly username that the medicine information is to be deleted.
+
+Example of usage:
+
+`deletemed u/johntan123 m/paracetemol`
+
+Expected outcome:
+
+Medicine details deleted message will be shown.
+
+```
+These medicine details are now deleted:
+Medicine Name: paracetemol, Frequency: once a day
+```
+
+
 ### `addappt` - Adds an appointment to an elderly
 
 Details of the elderly's appointment will be added to the application.
@@ -106,6 +124,24 @@ Appointments of johntan123 are shown below:
   2.Location: khoo teck puat hospital, Date: 05032021, Time: 1500, Purpose of Visit: eye checkup
 ```
 
+### `deleteappt` - Deletes appointment details of elderly that has been stored
+
+The user will provide the date and time of appointment and the elderly username that the appointment information is
+to be deleted.
+
+Example of usage:
+
+`deleteappt u/johntan123 d/02012021 t/1000`
+
+Expected outcome:
+
+Appointment details deleted message will be shown.
+
+```
+These appointment details are now deleted:
+Location: khoo teck puat hospital, Date: 02012021, Time: 1000, Purpose of Visit: general checkup
+```
+
 ### `addnok` - Adds details of Next-Of-Kin to an elderly
 
 Details of the elderly's Next-Of-Kin will be added to the application.
@@ -140,6 +176,23 @@ Next-Of-Kin details allocated to that elderly will be shown.
 Details of johntan123 Next-of-Kin are shown below:
 [NOK Name: tony lim, NOK Phone Number: 98765432, NOK Email: tonylim@gmail.com, NOK Aaddress: 123 Yishun Street, 
 Relationship: son]
+```
+
+### `deletenok` - Deletes Next-of-Kin details of elderly that has been stored
+
+The user will provide the elderly username and the name of Next-of-Kin, which the information is to be deleted.
+
+Example of usage:
+
+`deletenok u/johntan123 n/tony lim`
+
+Expected outcome:
+
+Next-ofKin details deleted message will be shown.
+
+```
+These details are now deleted:
+NOK Name: tony lim, NOK HP: 98765432, NOK Email: tonylim@gmail.com, NOK Address: 123 Yishun Street, Relationship: son
 ```
 
 ### `addrec` - Adds record details to an elderly
