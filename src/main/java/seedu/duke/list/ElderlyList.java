@@ -488,7 +488,7 @@ public class ElderlyList {
             String nokName = paramList[INDEX_OF_NOK_NAME];
             Elderly elderly = getElderly(elderlyName);
             Optional<NextOfKin> deletedNok = elderly.removeNok(nokName);
-            deletedNok.ifPresentOrElse(this::printDeletedNextOfKin, this::printNoNok);
+            deletedNok.ifPresentOrElse(this::printDeletedNextOfKin, this::printNoNextOfKin);
             System.gc();
         } catch (InvalidInputException e) {
             ui.printInvalidInputException(e);
@@ -503,7 +503,7 @@ public class ElderlyList {
         System.out.println(deletedNok);
     }
 
-    public void printNoNok() {
+    public void printNoNextOfKin() {
         System.out.println("No Next-Of-Kin found");
     }
 
@@ -518,7 +518,7 @@ public class ElderlyList {
             String medName = paramList[INDEX_OF_MEDICINE_NAME];
             Elderly elderly = getElderly(elderlyName);
             Optional<Medicine> deletedMed = elderly.removeMedicine(medName);
-            deletedMed.ifPresentOrElse(this::printDeletedMedicine, this::printNoMed);
+            deletedMed.ifPresentOrElse(this::printDeletedMedicine, this::printNoMedicine);
             System.gc();
         } catch (InvalidInputException e) {
             ui.printInvalidInputException(e);
@@ -527,7 +527,7 @@ public class ElderlyList {
         }
     }
 
-    public void printNoMed() {
+    public void printNoMedicine() {
         System.out.println("No Medicine found");
     }
 
